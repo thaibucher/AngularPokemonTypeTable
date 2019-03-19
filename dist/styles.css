@@ -1,0 +1,117 @@
+.contact-page{
+
+}
+.front-page{
+
+}
+.navItem {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pokemon-listing{
+    cursor: pointer;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.pokemon-sprite{
+
+}
+.pokemon-type{
+    width:28px; height:25px; text-transform: uppercase; text-align: center; font-family: 'VT323', monospace;
+    display: inline-block;
+}
+
+.pokemon-name{
+    width: 100%;
+}
+
+.search-results-container{
+    min-height: 560px;
+    max-height: 560px;
+    overflow-y: scroll;
+}
+.root{
+
+}
+.type-cell{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.type-header{
+    text-align: center;
+    min-width: 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.type-cell.header-hover{
+    box-shadow: inset 0px 11px 8px -10px white, inset 0px -11px 8px -10px white;
+}
+
+
+.type-cell.hover-vert{
+    box-shadow: inset 11px 0px 8px -10px white, inset -11px 0px 8px -10px white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.type-cell.hover-horz{
+    box-shadow: inset 0px 11px 8px -10px white, inset 0px -11px 8px -10px white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.type-cell.hover-horz.dual-cell{
+    box-shadow: inset 0px 11px 8px -10px white, inset 0px -11px 8px -10px white, inset -11px 0px 8px -10px white;
+}
+.type-cell.hover-horz.hover-vert, .type-cell.header-sticky.hover-vert, .type-cell.header-hover.hover-vert{
+    box-shadow: inset 0px 0px 8px 1px white;
+}
+
+.type-cell.header-sticky{
+    box-shadow: inset 0px 11px 8px -10px white, inset 0px -11px 8px -10px white;
+}
+
+.type-cell.highlight{
+
+}
+
+.type-cell.hideable.hide{
+    color: transparent;
+    background-color: black !important;
+    border: 1px solid transparent;
+}
+
+.type-cell.dual-cell{
+    border: 1px solid transparent;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+.super-eff{
+    background-color: green;
+}
+.normal-eff{
+}
+.not-eff{
+    background-color: red;
+}
+body{background:#aaa;color:#fff;border-color:#f00;font-family:'VT323',monospace}

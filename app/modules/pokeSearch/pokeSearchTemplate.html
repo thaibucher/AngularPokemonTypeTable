@@ -1,0 +1,21 @@
+<div class="search-wrapper" ng-controller="searchCtrl as searchCtrl">
+    Search a pokemon name, type, or number<input type="text"  placeholder="" ng-model="searchCtrl.searchText" ng-change="searchCtrl.searchType()">
+
+<div  class="container search-results-container">
+    <div class="row">
+        <div ng-repeat="pokemon in searchCtrl.pokeList | pokeSearchFilter:searchCtrl.searchText" class="col-12 pokemon-listing"
+             ng-if="searchCtrl.showResults"
+            ng-click="searchCtrl.searchItemClick(pokemon)">
+            <div class="pokemon-name">#{{pokemon.id}} {{pokemon.name}}</div>
+            <div style="width: 100%">
+                <div class="pokemon-type"
+                     ng-style="{'background-color':searchCtrl.typeList[searchCtrl.typeToId(pokemon.types[0])].color}">{{searchCtrl.typeList[searchCtrl.typeToId(pokemon.types[0])].abr}}</div>
+                <div ng-if="pokemon.types.length === 2"
+                     class="pokemon-type"
+                     ng-style="{'background-color':searchCtrl.typeList[searchCtrl.typeToId(pokemon.types[1])].color}">{{searchCtrl.typeList[searchCtrl.typeToId(pokemon.types[1])].abr}}</div>
+            </div>
+            <img class="pokemon-sprite" style="display: inline-block;" ng-src="{{pokemon.sprite}}" >
+        </div>
+    </div>
+</div>
+</div>

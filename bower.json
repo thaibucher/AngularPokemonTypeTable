@@ -1,0 +1,15 @@
+{
+  "name": "TestWebsite",
+  "description": "Vocal Lesson Website",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

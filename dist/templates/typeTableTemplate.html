@@ -1,0 +1,55 @@
+<div class="table-wrapper" ng-controller="tableCtrl as tableCtrl">
+    <table class="type-table">
+        <tr>
+            <td class="blankCell"></td>
+            <td class="type-header" ng-repeat="type in tableCtrl.typeList"
+                ng-click="tableCtrl.columnHeaderClick($event)"
+                ng-style="{'background-color':type.color}"
+                data-typeId="{{type.id}}" >
+                {{type.abr}}
+            </td>
+            <td class="blankCell"></td>
+        </tr>
+        <tr ng-repeat="type in tableCtrl.typeList">
+            <td class="type-header" ng-style="{'background-color':type.color}"
+                ng-click="tableCtrl.rowHeaderClick($event)"
+                ng-mouseover="tableCtrl.rowHeaderOver($event)"
+                ng-mouseleave="tableCtrl.rowHeaderLeave($event)">
+                {{type.name}}
+            </td>
+            <td class="type-cell hideable" ng-repeat="cell in type.eff track by $index"
+                ng-click="tableCtrl.clickCell($event)"
+                ng-mouseover="tableCtrl.cellHover($event)"
+                ng-mouseleave="tableCtrl.leaveCell()"
+                ng-class="{'super-eff': cell>1, 'not-eff': cell<1}"
+                data-typeId="{{$index}}"
+                data-eff="{{cell}}">
+                x{{cell}}
+            </td>
+            <td class="type-header" ng-style="{'background-color':type.color}"
+                ng-click="tableCtrl.rowHeaderClick($event)"
+                ng-mouseover="tableCtrl.rowHeaderOver($event)"
+                ng-mouseleave="tableCtrl.rowHeaderLeave($event)">
+                {{type.name}}
+            </td>
+            <td class="type-cell dual-cell"
+                ng-show="tableCtrl.showDualColumn"
+                ng-click="tableCtrl.clickCell($event)"
+                ng-mouseover="tableCtrl.cellHover($event)"
+                ng-mouseleave="tableCtrl.leaveCell()"
+                ng-class="{'super-eff': tableCtrl.selectedTypeData[$index]>1, 'not-eff': tableCtrl.selectedTypeData[$index]<1}">
+                x{{tableCtrl.selectedTypeData[$index]}}
+            </td>
+        </tr>
+        <tr>
+            <td class="blankCell"></td>
+            <td class="type-header" ng-repeat="type in tableCtrl.typeList"
+                ng-click="tableCtrl.columnHeaderClick($event)"
+                ng-style="{'background-color':type.color}"
+                data-typeId="{{type.id}}" >
+                {{type.abr}}
+            </td>
+            <td class="blankCell"></td>
+        </tr>
+    </table>
+</div>

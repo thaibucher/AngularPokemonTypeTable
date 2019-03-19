@@ -1,0 +1,12 @@
+<div class="navbarWrapper row" ng-controller="navCtrl2 as navCtrl2">
+    <div class="logo">
+        Hello I am Image2
+    </div>
+    <div class="nav-container container">
+        <div class="row">
+            <div class="navItem col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0" ng-repeat="button in navCtrl2.buttonList" ng-click="navCtrl2.navigate(button.url)">
+                {{button.name}}2
+            </div>
+        </div>
+    </div>
+</div>
